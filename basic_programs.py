@@ -34,3 +34,13 @@ def fibonacci(n):
     return fib[:n]
 
 print(fibonacci(5))  # [0, 1, 1, 2, 3]
+
+
+def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in "aeiou":
+            count += 1
+    return count
+
+print(count_vowels("hello world"))  # 3
