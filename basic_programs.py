@@ -44,3 +44,37 @@ def count_vowels(s):
     return count
 
 print(count_vowels("hello world"))  # 3
+
+
+def isPrime(num):
+    if num < 2:
+        return False
+    for i in range(2, num):
+        if num%i == 0:
+            return False
+    return True
+
+n = int(input("Enter Number =>"))
+
+for num in range(1,n+1):
+    if isPrime(num):
+        print(num, end=" ")
+
+
+nums = [1, 2, 2, 3, 4, 4, 5]
+rs = list(set(nums))
+print(rs)
+print(type(rs))
+print(rs[::-1])
+
+rs[0],rs[-1] = rs[-1], rs[0]
+print(rs)
+
+def largest(n):
+    larg = n[0]
+    for i in range(len(n)):
+        if n[i] > larg:
+            larg = n[i]
+    return (larg)
+
+print(largest([10, 20, 45, 5]))
