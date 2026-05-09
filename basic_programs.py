@@ -1,3 +1,57 @@
+# s = "vijay"
+# rev = ""
+# for i in s:
+#     rev = i + rev
+
+# print(rev)
+# print(s == rev)
+    
+    
+    
+# def two_sum(nums,target):
+#     seen = {}
+    
+#     for i,num in enumerate(nums):
+#         need = target - num
+        
+#         if need in seen:
+#             return [seen[need], i]
+#         seen[num] = i
+    
+#     return []
+    
+# nums = [1,2,3,4,5,6]
+# target = 6
+
+# print(two_sum(nums,target))
+
+
+
+def sec_larg(nums):
+    if len(nums) < 2:
+        return -1 
+        
+    first = second = float('-inf')
+    
+    for num in nums:
+        if num > first:
+            second = first
+            first = num
+            
+        elif first > num > second:
+            second = num
+            
+        
+    return second if  second !=  float('-inf') else -1 
+    
+    
+print(sec_larg([1, 8, 3, 4, 7]))        # 4
+
+
+
+
+
+
 # ==================== PROGRAM 1: STRING REVERSAL ====================
 # Description: Reverses a given string using slicing
 
